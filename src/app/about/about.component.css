@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* HERO SECTION STYLING */
+.Hero {
+    height: 80vh;
+    background-image: url("/img/team.png");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 40px;
+}

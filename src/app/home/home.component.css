@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Modern typography */
+}
+
+
+
+/*  PORTFOLIO SECTION STYLING  */
+/* Portfolio Section */
+.portfolio-section {
+    margin-top: 80px;
+    text-align: center;
+    padding: 50px 20px;
+    background: #111; /* Dark background */
+    color: white;
+}
+
+/* Portfolio Heading */
+.portfolio-heading {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 10px;
+    h3{
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px;
+        border-radius: 5px;
+    }
+}
+
+/* Portfolio Item Styling */
+.portfolio-item {
+    position: relative;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Portfolio Background Images */
+.item-wedding { background-image: url("/img/wedding1.jpg"); background-size: cover; background-position: center;  }
+.item-fashion { background-image: url("/img/fashion.jpg"); background-size: cover; background-position: center;  }
+.item-event {  background-image: url("/img/event.jpg"); background-size: cover; background-position: center;  }
+.item-product {  background-image: url("/img/male-watch.jpg"); background-size: cover; background-position: center; }
+.item-drone {  background-image: url("/img/drone.jpg"); background-size: cover; background-position: center;  }
+.item-portrait {  background-image: url("/img/portrait.jpg"); background-size: cover; background-position: center;  }
+
+/* Hover Effect */
+.portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+/* View More Button */
+.view-more-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: #eeff50;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out, transform 0.2s;
+}
+
+/* Hover Effect on Button */
+.view-more-btn:hover {
+    background: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+    .portfolio-heading {
+        font-size: 2.2rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+
+    .view-more-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* achivements section */
+
+.achievements {
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.achievements h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Achievements Grid */
+.achievements-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Individual Achievement Box */
+.achievement {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.achievement:hover {
+    transform: scale(1.05);
+}
+
+/* Number Styling */
+.achievement h3 {
+    font-size: 2rem;
+    margin: 0;
+    color: #007bff; /* Blue color */
+}
+
+.achievement p {
+    font-size: 1rem;
+    margin: 5px 0 0;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .achievements-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

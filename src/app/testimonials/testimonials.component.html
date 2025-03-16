@@ -1,0 +1,20 @@
+<div class="testimonials-container">
+    @for (testimonial of testimonials; track testimonial) {
+        @if (testimonials.indexOf(testimonial) === currentIndex) {
+            <div [@slideAnimation] class="testimonial">
+                <p>"{{ testimonial.text }}"</p>
+                <p class="author">- {{ testimonial.author }}</p>
+            </div>
+        }
+    }
+
+    <!-- Navigation Dots -->
+    <div class="dots">
+        @for (_ of testimonials; track _) {
+            <span class="dot"
+                  [class.active]="testimonials.indexOf(_) === currentIndex"
+                  (click)="setTestimonial(testimonials.indexOf(_))">
+            </span>
+        }
+    </div>
+</div>

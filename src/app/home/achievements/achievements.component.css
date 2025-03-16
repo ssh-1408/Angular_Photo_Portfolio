@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 2.0rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+section {
+    p {
+        font-size: 1rem;
+        padding-top: 15px;
+        letter-spacing: 2px;
+        text-align: center;
+        max-width: 800px;
+        font-weight:700;
+    }
+}
+
+.achivement-items {
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 20px;
+    margin-bottom: 40px;
+  
+}
+.image-item {
+    width: 50px;
+    margin-bottom: 15px;
+
+}
+
+/* Mobile Responsive */
+@media (max-width: 425px) {
+    h2 { font-size: 1.1rem; }
+
+    .achivement-items { 
+        p { font-size: 0.7rem; }
+        h3{ font-size: 0.9rem; }
+    
+    }
+
+    
+}
