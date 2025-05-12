@@ -10,15 +10,10 @@ h2 {
     letter-spacing: 2px;
     text-align: center;
 }
-section {
-    p {
-        font-size: 1rem;
-        padding-top: 15px;
-        letter-spacing: 2px;
-        text-align: center;
-        max-width: 800px;
-    }
-}
+section p {
+    font-size: 1rem;
+    max-width: 800px;
+  }
 
 section {
     padding: 10px;
@@ -86,7 +81,7 @@ section {
         align-items: center;
         justify-content: center;
         text-align: center;
-        font-size: 2vw; /* Large text */
+        font-size: clamp(1rem, 2vw, 2rem);
         font-weight: bold;
         color: rgb(0, 0, 0); /* Ensure contrast */
         padding: 20px;
@@ -104,9 +99,20 @@ section {
     margin-top: 40px;
     margin-bottom: 40px;
     background: black;
-    color: rgb(255, 255, 255);
-    height: 20vh;
+    color: white;
+    height: auto; /* Use 'auto' to allow content to grow with text size */
+    padding: 2rem 1rem; /* Add padding to the section itself for spacing */
+    text-align: center; /* Optional: center-align text */
 }
+
+/* Text elements inside the section */
+.frame-section h2,
+.frame-section p {
+    padding: 0.5rem 0; /* Vertical padding only */
+    font-size: clamp(1rem, 2.5vw, 2rem); /* Responsive font */
+    margin: 0; /* Remove default margins for better control */
+}
+
 .frame-text {
     color: #eeff50;
 }
@@ -207,3 +213,29 @@ section {
     }
     
 }
+
+@media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      height: auto;
+    }
+  
+    .grid-item {
+    width: 100%;
+    height: 200px; /* ✅ give it a fixed height for image visibility */
+    background-size: cover;
+    background-position: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .item1,
+    .item2,
+    .item3,
+    .item4,
+    .item5 {
+      grid-column: auto !important;
+      grid-row: auto !important;
+    }
+  }

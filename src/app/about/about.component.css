@@ -2,12 +2,51 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif; 
 }
 /* HERO SECTION STYLING */
+
 .Hero {
-    height: 80vh;
-    background-image: url("/img/team.png");
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 40px;
+  height: 80vh;
+  background-image: url("/img/team.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
 }
+
+.about-section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .about-section h2,
+  .about-section h3 {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
+  
+  .about-section p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .contact-info {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+  .contact-info li {
+    margin: 0.5rem 0;
+  }
